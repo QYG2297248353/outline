@@ -15,7 +15,7 @@ import {
   SearchQuery,
   Event,
   User,
-  GroupPermission,
+  GroupMembership,
 } from "@server/models";
 import { DocumentHelper } from "@server/models/helpers/DocumentHelper";
 import {
@@ -4094,7 +4094,7 @@ describe("#documents.users", () => {
         permission: CollectionPermission.Read,
         createdById: user.id,
       }),
-      GroupPermission.create({
+      GroupMembership.create({
         collectionId: collection.id,
         groupId: group.id,
         permission: CollectionPermission.ReadWrite,
